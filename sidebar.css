@@ -1,0 +1,26 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    /* margin: 0; */
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
+    width: 30vh;
+    border-right: 2px solid black;
+}
+
+.sidebar .bar{
+    display: flex;
+    padding-top: 20px;
+    background-color: blue;
+}
+
+.sidebar .contact{
+    display: flex;
+    padding-top: 20px;
+    background-color: red;
+    height: 88vh;
+}
