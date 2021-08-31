@@ -10,6 +10,7 @@
     flex: 0.35;
     width: 30vh;
     border-right: 2px solid black;
+    margin: 0px;
 }
 
 .sidebar .bar{
@@ -20,7 +21,7 @@
 
 .sidebar .contact{
     display: flex;
-    padding-top: 20px;
-    background-color: red;
+    padding-top: 0px;
+   
     height: 88vh;
 }
