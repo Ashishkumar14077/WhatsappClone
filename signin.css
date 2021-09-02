@@ -21,7 +21,7 @@ body{
 }
 .login-box{
   background-color:#FEFEFE;
-  padding: 70px 160px 50px 160px;
+  padding: 80px 155px 60px 155px;
   display: flex;
   flex-direction: column;
   align-items: center;
