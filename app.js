@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 80;
+const port = process.env.port || 80;
 const router = express.Router();
 
 app.use('/static', express.static('static'));
@@ -10,8 +10,10 @@ app.use('/static', express.static('static'));
 
 app.set('views', path.join(__dirname, 'views'));
 
+
 app.get('/', (req, res)=>{
     //const params = {'title': 'whatsapp clone'};
+   // res.render(path.join(__dirname+'/views/signin'));
     res.sendFile(path.join(__dirname+'/views/signin.html'));
 })
 
