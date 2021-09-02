@@ -16,11 +16,11 @@
     display: flex;
     padding-top: 20px;
     background-color: gray;
-    height: 88vh;
+    height: 94vh;
 }
 
 .chat .message{
-    margin-top: 85vh;
+    margin-top: 88.3vh;
     background-color: purple;
     height: 20px;
     width: 80%;

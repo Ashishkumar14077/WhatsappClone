@@ -17,6 +17,11 @@ body {
     overflow-y: hidden;
   }
   
+  .scrollarea {
+    overflow-y: auto;
+    margin-right: -18px;
+  }
+  
   .b-example-divider {
     flex-shrink: 0;
     width: 0;
