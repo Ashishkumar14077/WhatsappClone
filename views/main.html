@@ -1,143 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>whatsapp</title>
-    <link rel="stylesheet" href="../static/sidebar.css">
-    <link rel="stylesheet" href="../static/chat.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>whatsapp</title>
+  <link rel="stylesheet" href="../static/sidebar.css" />
+  <link rel="stylesheet" href="../static/chat.css" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
 
-    
+  <!-- Bootstrap core CSS -->
 
-    <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    
-
-    
-    <!-- Custom styles for this template -->
-    <link href="../static/sidebars.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../static/sidebars.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="page">
-        <div class="sidebar">
-            <div class="contact">
-                <div class="b-example-divider"></div>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="three-dots" viewBox="0 0 16 16">
+      <path
+        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+    </symbol>
+    <symbol id="chat-left" viewBox="0 0 16 16">
+      <path
+        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+    </symbol>
+  </svg>
+  <div class="page">
+    <div class="sidebar">
+      <div class="contact">
+        <div class="b-example-divider"></div>
 
-                <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;">
-                  <a href="#" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                    
-                    <span class="fs-5 fw-semibold">List group</span>
-                  </a>
-                  <div class="list-group list-group-flush border-bottom scrollarea">
-                    <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small>Wed</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Tues</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Mon</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-              
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Wed</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Tues</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Mon</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Wed</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Tues</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Mon</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Wed</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Tues</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                      <div class="d-flex w-100 align-items-center justify-content-between">
-                        <strong class="mb-1">List group item heading</strong>
-                        <small class="text-muted">Mon</small>
-                      </div>
-                      <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-                    </a>
-                  </div>
-                </div>
-              
-                <!-- <div class="b-example-divider"></div> -->
-            </div>
+        <div class="
+              d-flex
+              flex-column
+              align-items-stretch
+              flex-shrink-0
+              bg-white
+            " style="width: 380px">
+          <a href="#" class="
+                d-flex
+                align-items-center
+                flex-shrink-0
+                p-3
+                link-dark
+                text-decoration-none
+                border-bottom
+              ">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
+
+            <span class="fs-5 fw-semibold">List group</span>
+            <svg class="bi bi-chat-left-text-fill" width="16" height="16">
+              <use xlink:href="#chat-left" />
+            </svg>
+            <svg class="bi bi-three-dots-vertical" width="16" height="16">
+              <use xlink:href="#three-dots" />
+            </svg>
+          </a>
+
+          <div class="list-group list-group-flush border-bottom scrollarea">
+            <a href="#" class="
+                  list-group-item list-group-item-action
+                  active
+                  py-3
+                  lh-tight
+                " aria-current="true">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small>Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+              <div class="
+                    d-flex
+                    w-100
+                    align-items-center
+                    justify-content-between
+                  ">
+                <strong class="mb-1">List group item heading</strong>
+                <small class="text-muted">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Some placeholder content in a paragraph below the heading and
+                date.
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="chat">
-            <div class="chat_bar">
-                CHATbar
-            </div>
-            <div class="chat_area">
-                chat here
-                <div class="message">
-                    message
-                </div>
-            </div>
-        </div>
+
+        <!-- <div class="b-example-divider"></div> -->
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <div class="chat">
+      <div class="chat_bar">CHATbar</div>
+      <div class="chat_area">
+        chat here
+        <div class="message">message</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
 
-    <script src="../static/sidebars.js"></script>
+  <script src="../static/sidebars.js"></script>
 </body>
+
 </html>
