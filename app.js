@@ -58,6 +58,10 @@ app.get('/logout', (req, res)=>{
     res.redirect('/');
 })
 
+app.get('/register', (req, res)=>{
+    res.render('signup');
+})
+
 app.listen(port, ()=>{
     console.log(`the application is running at port http://localhost:${port}`);
 });
