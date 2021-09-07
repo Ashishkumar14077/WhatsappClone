@@ -48,7 +48,9 @@
     --chat-active-color: #ebebeb;
     --chat-window-beige: #e5ddd5;
     --sender-message-green: #dcf8c6;
+    /* --sender-message-green: #a0c3e2; */
     --type-message-bar: #f0f0f0;
+    --background-blue: #3A8ED7;
   }
   
   /************
@@ -67,7 +69,7 @@
   ******************/
   
   .top {
-    background: var(--background-green);
+    background: var(--background-blue);
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
@@ -299,11 +301,11 @@
   
   .chat-message-group {
     font-weight: 500;
-    color: inherit;
+    color: var(--background-blue);
   }
   
   .chat-message-typing {
-    color: var(--whatsapp-green);
+    color: var(--background-blue);
     font-weight: 500;
   }
   
@@ -331,7 +333,7 @@
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: var(--whatsapp-green);
+    background: var(--background-blue);
     color: var(--white);
     font-weight: 500;
     border-radius: 50%;
@@ -472,6 +474,7 @@
   .receiver-message {
     font-size: 1.4rem;
     margin-right: 3rem;
+    
   }
   
   .message-time,
