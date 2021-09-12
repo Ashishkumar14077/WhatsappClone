@@ -16,11 +16,19 @@
     display: flex;
     padding-top: 20px;
     background-color: gray;
+<<<<<<< HEAD
     height: 94vh;
 }
 
 .chat .message{
     margin-top: 88.3vh;
+=======
+    height: 88vh;
+}
+
+.chat .message{
+    margin-top: 85vh;
+>>>>>>> SIGNUP
     background-color: purple;
     height: 20px;
     width: 80%;

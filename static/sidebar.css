@@ -10,7 +10,10 @@
     flex: 0.35;
     width: 30vh;
     border-right: 2px solid black;
+<<<<<<< HEAD
     margin: 0px;
+=======
+>>>>>>> SIGNUP
 }
 
 .sidebar .bar{
@@ -21,6 +24,12 @@
 
 .sidebar .contact{
     display: flex;
+<<<<<<< HEAD
     padding-top: 0px;
     height: 100vh;
+=======
+    padding-top: 20px;
+    background-color: red;
+    height: 88vh;
+>>>>>>> SIGNUP
 }
