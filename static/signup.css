@@ -128,6 +128,7 @@ button{
     display:flex;
     text-decoration: none;
     flex-direction: column;
+    align-items: center;
     width: 80%;
     color:rgb(253, 253, 255);
 }
