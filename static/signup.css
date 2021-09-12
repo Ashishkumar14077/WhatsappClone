@@ -62,7 +62,13 @@ body{
 .name{
     display: inline-block;
 }
-
+.maxl{
+    display: inline-block;
+}
+.radio_inline{
+    display: inline-block;
+    padding-left: 10px;
+}
 input[type="name"].form-control,
 input[type="password"].form-control,
 input[type="number"].form-control,

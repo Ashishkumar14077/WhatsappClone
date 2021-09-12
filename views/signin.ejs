@@ -23,26 +23,27 @@
       <div class="signin-bar">
         Sign in to Whatsapp
       </div>
-      <div class="login">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username" id="sername">
-        </div>   
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password" id="password">
-        </div>        
-        <div class="form-group">
-          <label for="rememberMe">
-            <input type="checkbox" name="rememberMe" id="rememberMe">
-            Remember Password
-          </label>
-        </div>
-        <div class="form-group">
-          <button class="full-btn"><a href="#login">Login</a></button>
-        </div>
-        <div class="form-group">
-          <p class="notRegistered">Not Registered? <a href="register">Sign up</a> </p>
-        </div>
-      </div>
+      <form class="login" action="/loginDB" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" id="sername" name = "username">
+          </div>   
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+          </div>        
+          <div class="form-group">
+            <label for="rememberMe">
+              <input type="checkbox" name="rememberMe" id="rememberMe">
+              Remember Password
+            </label>
+          </div>
+          <div class="form-group">
+            <button class="full-btn" type="submit">Login</button>
+          </div>
+          <div class="form-group">
+            <p class="notRegistered">Not Registered? <a href="register">Sign up</a> </p>
+          </div>
+      </form>
+      
       <div class="separator">
         Or login via Google
         <!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->

@@ -3,13 +3,21 @@ const express = require("express");
 const passport = require("passport");
 const path = require("path");
 const app = express();
-const port = 8080;
+require('./db/conn');
+const Register = require("./models/register");
+const port = process.env.PORT ||8080;
 const router = express.Router();
 const cookieSession = require("cookie-session");
+const e = require("express");
 require('./passport-setup');
-
 app.use('/static', express.static('static'));
 
+const static_path = path.join(__dirname, '/')
+
+app.use(express.json());
+app.use(express.urlencoded({extended : false}));
+
+// google login
 app.use(cookieSession({
     name: 'user-session',
     keys: ['key1', 'key2']
@@ -61,7 +69,47 @@ app.get('/logout', (req, res)=>{
 app.get('/register', (req, res)=>{
     res.render('signup');
 })
+// create a new data base in our data base
+app.post('/register', async(req, res)=>{
+    try{
+        const password = req.body.password;
+        const cpassword = req.body.confirmPassword;
 
+        if(password === cpassword){
+            const registerUser = new Register({
+                firstname: req.body.firstname,
+                lastname: req.body.lastname,
+                email: req.body.email,
+                gender: req.body.gender,
+                age: req.body.age,
+                username: req.body.username,
+                password:req.body.password ,
+                confirmPassword:cpassword
+            })
+            const registered = await registerUser.save();
+            res.status(201).render('signin',{name:req.body.firstname, username:req.body.username})
+        }else{
+            res.send("password are not matching");
+        }
+    }
+    catch(e){
+        res.status(400).send(e);
+    }
+})
+// login validdation
+app.post("/loginDB",async(req, res)=>{
+    try{
+        const username = req.body.username;
+        const password = req.body.password;
+
+        const user = await Register.findOne({username: username});
+        if(user.password === password){
+            res.status(201).render('main');
+        }
+    }catch(e){
+        res.status(400).send("Invalid login Credentials");
+    }
+})
 app.listen(port, ()=>{
     console.log(`the application is running at port http://localhost:${port}`);
 });

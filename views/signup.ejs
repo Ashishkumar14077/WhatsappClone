@@ -18,27 +18,43 @@
             </div>
             <div class="text">Create an Account</div>
             <div class="signup">
-                <form action="get">
+            <!-- form input-->
+                <form action="/register" method="POST">
                     <div class="form-group">
                         <div class="name">
-                            <input type="name" class="form-control" placeholder="Enter first name">
-                            <input type="name" class="form-control" placeholder="Enter last name">
+                            <input type="name" class="form-control" placeholder="Enter first name" name="firstname">
+                            <input type="name" class="form-control" placeholder="Enter last name" name="lastname">
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Enter your age">
+                        
+                        <div class = "maxl">
+                            <input type="number" class="form-control" placeholder="Enter your age" name="age">
+                                <label class="radio_inline">
+                                    <input type="radio" name="gender" value="male" checked>
+                                    <span> Male </span>
+                                </label>
+                                <label class="radio_inline">
+                                    <input type="radio" name="gender" value="female" checked>
+                                    <span> Female </span>
+                                </label>
+                                <label class="radio_inline">
+                                    <input type="radio" name="gender" value="Others" checked>
+                                    <span> Others </span>
+                                </label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <input type="email" class="form-control" placeholder="Enter your email" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="username" class="form-control" placeholder="Enter username">
+                        <input type="username" class="form-control" placeholder="Enter username" name="username">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Enter Password">
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password">
+                        <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword">
                     </div>
                     
                         <button class = "full-btn">Create Account</button>
