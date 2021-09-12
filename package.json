@@ -1,17 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "chatapp",
-  "version": "1.0.0",
-  "description": "package for whatsapp clone",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "harshit",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-=======
   "name": "whatsappclone",
   "version": "1.0.0",
   "description": "",
@@ -41,6 +28,5 @@
     "passport": "^0.4.1",
     "passport-google-oauth2": "^0.2.0",
     "passport-oauth2": "^1.6.0"
->>>>>>> SIGNUP
   }
 }
