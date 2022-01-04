@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>whatsapp</title>
     <link rel="stylesheet" href="../static/sidebar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <link rel="stylesheet" href="../static/chat.css">
+    <script src="../static/chat.js"></script>
+
 </head>
 <body>
     <div class="page-header text-center">
@@ -24,13 +29,20 @@
             </div>
         </div>
         <div class="chat">
-            <div class="chat_bar">
-                CHATbar
+            <div id="title_container" class="chat_title_container">
+                <div id="title_inner_container">
+                    <h1 id="title" class="chat_title">ChatApp</h1>
+                </div>
             </div>
-            <div class="chat_area">
-                chat here
-                <div class="message">
-                    message
+            <div id="chat_container">
+                <div id="chat_inner_container">
+                    <div id="chat_content_container"></div>
+                    <div id="chat_input_container">
+                        <input id="chat_input" maxlength="1000">
+                        <button id="chat_input_send" class disabled="true">
+                            <i class="far fa-paper-plane" aria-hidden="true">...</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
