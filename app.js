@@ -12,6 +12,8 @@ const e = require("express");
 require('./passport-setup');
 app.use('/static', express.static('static'));
 
+  
+
 const static_path = path.join(__dirname, '/')
 
 app.use(express.json());
@@ -44,7 +46,7 @@ app.get('/', (req, res)=>{
 app.get('/home',isLoggedIn, (req, res)=>{
     res.render('main',{name:req.user.displayName, pic:req.user.photos[0].value});
 })
-
+// to debug
 app.get('/sucess', (req, res)=>res.send('successfully login'));
 
 app.get('/failed', (req, res)=>res.send('you failed to login'));
@@ -69,7 +71,8 @@ app.get('/logout', (req, res)=>{
 app.get('/register', (req, res)=>{
     res.render('signup');
 })
-// create a new data base in our data base
+//create a new data base in our data base
+/*
 app.post('/register', async(req, res)=>{
     try{
         const password = req.body.password;
@@ -96,7 +99,9 @@ app.post('/register', async(req, res)=>{
         res.status(400).send(e);
     }
 })
+*/
 // login validdation
+/*
 app.post("/loginDB",async(req, res)=>{
     try{
         const username = req.body.username;
@@ -110,6 +115,7 @@ app.post("/loginDB",async(req, res)=>{
         res.status(400).send("Invalid login Credentials");
     }
 })
+*/
 app.listen(port, ()=>{
     console.log(`the application is running at port http://localhost:${port}`);
 });

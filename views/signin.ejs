@@ -23,9 +23,8 @@
       <div class="signin-bar">
         Sign in to Whatsapp
       </div>
-      <form class="login" action="/loginDB" method="POST">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" id="sername" name = "username">
+            <input type="email" class="form-control" placeholder="Email" id="email" name = "email">
           </div>   
           <div class="form-group">
             <input type="password" class="form-control" placeholder="Password" id="password" name="password">
@@ -37,12 +36,11 @@
             </label>
           </div>
           <div class="form-group">
-            <button class="full-btn" type="submit">Login</button>
+            <button class="full-btn" onclick="signin()">Login</button>
           </div>
           <div class="form-group">
             <p class="notRegistered">Not Registered? <a href="register">Sign up</a> </p>
           </div>
-      </form>
       
       <div class="separator">
         Or login via Google
@@ -55,6 +53,9 @@
           </a>
         </div>
   </div>
-  </script>
 </body>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="../static/signupsignin.js"></script>
 </html>
