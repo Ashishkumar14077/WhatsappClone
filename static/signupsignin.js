@@ -63,6 +63,7 @@ function register() {
             }
             database_ref.child('users/' + user.uid).set(user_data)
             alert('User created!!!')
+            //location.assign("/");
         })
         .catch(function(error){
             // firebase will alert for any errors

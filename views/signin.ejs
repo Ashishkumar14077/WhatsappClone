@@ -6,6 +6,10 @@
   <meta name="google-signin-client_id" content="395039619288-bfu3g0nia0e2047vpjojmklvql7jqtgl.apps.googleusercontent.com">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js" defer ></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js" defer ></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer ></script>
   <link rel="stylesheet" href="../static/signin.css" type="text/css">
   <script src="../static/signin.js"></script>
 <title>Whatsapp Login</title>
@@ -23,39 +27,87 @@
       <div class="signin-bar">
         Sign in to Whatsapp
       </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" id="email" name = "email">
-          </div>   
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" id="password" name="password">
-          </div>        
-          <div class="form-group">
-            <label for="rememberMe">
-              <input type="checkbox" name="rememberMe" id="rememberMe">
-              Remember Password
-            </label>
-          </div>
-          <div class="form-group">
-            <button class="full-btn" onclick="signin()">Login</button>
-          </div>
-          <div class="form-group">
-            <p class="notRegistered">Not Registered? <a href="register">Sign up</a> </p>
-          </div>
-      
-      <div class="separator">
-        Or login via Google
-        <!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
-      </div>
-        <div class="Google">
-          <a href="/login"> 
-            <i class="bi bi-google"></i>
-            Google
-          </a>
+
+<form id="login">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email" id="email" name = "email">
+        </div>   
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+        </div>        
+        <div class="form-group">
+          <label for="rememberMe">
+            <input type="checkbox" name="rememberMe" id="rememberMe">
+            Remember Password
+          </label>
         </div>
+        <div class="form-group">
+          <button class="full-btn">Login</button>
+        </div>
+        <div class="form-group">
+          <p class="notRegistered">Not Registered? <a href="register">Sign up</a> </p>
+        </div>
+</form>
+<div class="separator">
+  Or login via Google
+  <!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
+</div>
+  <div class="Google">
+    <a href="/login"> 
+      <i class="bi bi-google"></i>
+      Google
+    </a>
   </div>
+</div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-<script src="../static/signupsignin.js"></script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const firebaseConfig = {
+    apiKey: "AIzaSyBZqxkT8afL2OWBif790MQ1tBfkXZIZgro",
+    authDomain: "chatapp-ce0cf.firebaseapp.com",
+    databaseURL: "https://chatapp-ce0cf-default-rtdb.firebaseio.com",
+    projectId: "chatapp-ce0cf",
+    storageBucket: "chatapp-ce0cf.appspot.com",
+    messagingSenderId: "1012747706332",
+    appId: "1:1012747706332:web:ef00369dceae6f0d99b919"
+};
+
+    firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+    document
+      .getElementById("login")
+      .addEventListener("submit", (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .then(({ user }) => {
+            return user.getIdToken().then((idToken) => {
+              return fetch("/sessionLogin", {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json",
+                  "CSRF-Token": Cookies.get("XSRF-TOKEN"),
+                },
+                body: JSON.stringify({ idToken }),
+              });
+            });
+          })
+          .then(() => {
+            return firebase.auth().signOut();
+          })
+          .then(() => {
+            window.location.assign("/home");
+          });
+        return false;
+      });
+  });
+</script>
 </html>
