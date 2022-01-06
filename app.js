@@ -4,17 +4,20 @@ const passport = require("passport");
 const path = require("path");
 const app = express();
 require('./db/conn');
+const cookieParser = require("cookie-parser");
+const csrf = require("csurf");
+const bodyParser = require("body-parser");
 const Register = require("./models/register");
-const port = process.env.PORT ||8080;
 const router = express.Router();
 const cookieSession = require("cookie-session");
 const e = require("express");
 require('./passport-setup');
 app.use('/static', express.static('static'));
-
-  
+const port = process.env.PORT ||8080;
 
 const static_path = path.join(__dirname, '/')
+
+const csrfMiddleware = csrf({ cookie: true });
 
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
@@ -39,6 +42,7 @@ app.use(passport.session());
 app.set('views', path.join(__dirname, 'views'));
 //middleware
 app.set('view engine','ejs');
+app.engine("html", require("ejs").renderFile);
 
 app.get('/', (req, res)=>{
      res.render('signin');
